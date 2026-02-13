@@ -1,0 +1,75 @@
+{
+  "name": "file-deduplicator",
+  "title": "File Deduplicator",
+  "description": "Find and manage duplicate files using the file-deduplicator CLI",
+  "icon": "extension-icon.png",
+  "author": "luinbytes",
+  "categories": ["Productivity", "Developer Tools"],
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "find-duplicates",
+      "title": "Find Duplicates",
+      "description": "Scan a folder for duplicate files",
+      "mode": "view"
+    }
+  ],
+  "preferences": [
+    {
+      "name": "cliPath",
+      "title": "CLI Path",
+      "description": "Path to the file-deduplicator binary",
+      "type": "textfield",
+      "default": "file-deduplicator",
+      "required": false
+    },
+    {
+      "name": "defaultScanLocation",
+      "title": "Default Scan Location",
+      "description": "Default folder to scan for duplicates",
+      "type": "textfield",
+      "default": "~",
+      "required": false
+    },
+    {
+      "name": "algorithm",
+      "title": "Hash Algorithm",
+      "description": "Algorithm to use for file hashing",
+      "type": "dropdown",
+      "default": "sha256",
+      "required": false,
+      "data": [
+        { "value": "sha256", "title": "SHA-256 (recommended)" },
+        { "value": "md5", "title": "MD5 (faster, less secure)" },
+        { "value": "sha1", "title": "SHA-1" }
+      ]
+    },
+    {
+      "name": "showHiddenFiles",
+      "title": "Show Hidden Files",
+      "description": "Include hidden files in duplicate scan",
+      "type": "checkbox",
+      "default": false,
+      "required": false,
+      "label": "Include hidden files"
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.64.0"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^1.0.8",
+    "@types/node": "20.10.0",
+    "@types/react": "18.2.27",
+    "eslint": "^8.51.0",
+    "prettier": "^3.0.3",
+    "typescript": "^5.2.2"
+  },
+  "scripts": {
+    "build": "ray build -e dist",
+    "dev": "ray develop",
+    "fix-lint": "ray lint --fix",
+    "lint": "ray lint",
+    "publish": "npx @raycast/api@latest publish"
+  }
+}
