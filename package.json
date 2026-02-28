@@ -3,7 +3,7 @@
   "title": "File Deduplicator",
   "description": "Find and manage duplicate files using the file-deduplicator CLI",
   "icon": "extension-icon.png",
-  "author": "luinbytes",
+  "author": "nazzy_wazzy_lu",
   "categories": ["Productivity", "Developer Tools"],
   "license": "MIT",
   "commands": [
