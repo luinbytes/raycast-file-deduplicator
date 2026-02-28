@@ -5,7 +5,6 @@ import {
   showToast,
   Toast,
   getPreferenceValues,
-  showInFinder,
 } from "@raycast/api";
 import { useState, useEffect } from "react";
 import { scanForDuplicates, formatFileSize, getFilename } from "./lib/cli";
@@ -57,7 +56,10 @@ export default function FindDuplicates() {
         });
       }
     } catch (error) {
-      const message = error instanceof Error ? error.message : "Failed to scan for duplicates";
+      const message =
+        error instanceof Error
+          ? error.message
+          : "Failed to scan for duplicates";
       showToast({
         style: Toast.Style.Failure,
         title: "Scan failed",

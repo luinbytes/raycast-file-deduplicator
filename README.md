@@ -13,6 +13,21 @@ A Raycast extension for finding and managing duplicate files using the [file-ded
 - [Raycast](https://www.raycast.com/) installed
 - [file-deduplicator](https://github.com/luinbytes/file-deduplicator) CLI installed
 
+## Status
+
+**Code: ✅ Complete**
+- Find Duplicates command implemented
+- Results list with grouped duplicates
+- Quick actions (trash, copy path, show in finder)
+- Preferences (CLI path, scan location, algorithm)
+- Error handling
+
+**Blockers before publishing:**
+1. **Author**: Need Lu's Raycast username (not GitHub username)
+   - Update `package.json` → `author` field
+2. **Icon**: Need 512x512 PNG icon
+   - Replace `assets/extension-icon.png`
+
 ## Installation
 
 1. Clone this repository

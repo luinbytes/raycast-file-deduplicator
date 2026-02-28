@@ -26,7 +26,7 @@ export async function scanForDuplicates(
     recursive?: boolean;
     algorithm?: "sha256" | "md5" | "sha1";
     minSize?: number;
-  }
+  },
 ): Promise<CLIOutput> {
   const cliPath = getCLIPath();
   const preferences = getPreferenceValues<Preferences>();
@@ -63,7 +63,7 @@ export async function scanForDuplicates(
       // Check for common errors
       if (error.message.includes("ENOENT")) {
         throw new Error(
-          "file-deduplicator CLI not found. Please install it or set the correct path in preferences."
+          "file-deduplicator CLI not found. Please install it or set the correct path in preferences.",
         );
       }
       throw error;
